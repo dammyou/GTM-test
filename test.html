@@ -1,7 +1,6 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
-	<!-- Google tag (gtag.js) -->
+            <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-74JH1Q3Y6H"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -10,6 +9,7 @@
 
   gtag('config', 'G-74JH1Q3Y6H');
 </script>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,11 +20,20 @@
             font-size: 16px;
         }
     </style>
+    <script>
+        function openNewPage() {
+            const newWindow = window.open('', '_blank');
+            newWindow.document.write(`
+                <h1>새로운 페이지입니다.</h1>
+                <button onclick="alert('새 페이지의 버튼이 클릭되었습니다!')">새 페이지 버튼 클릭!</button>
+            `);
+            newWindow.document.close();
+        }
+    </script>
 </head>
 <body>
     <h1>안녕하세요! 버튼 예제입니다.</h1>
-    <button onclick="alert('버튼이 클릭되었습니다!')">클릭하세요!</button>
+    <button onclick="openNewPage()">클릭하세요!</button>
 </body>
-
 </html>
 
